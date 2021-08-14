@@ -1,0 +1,260 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background-color: #edeff2;
+}
+
+.content {
+	&__products {
+		margin-top: 300px;
+	}
+}
+.products {
+	&__label {
+	}
+
+	&__button {
+	}
+}
+.product {
+	&__items {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		max-width: 1070px;
+		column-gap: 20px;
+		row-gap: 40px;
+		grid-template-columns: repeat(3 (50px, 1fr));
+
+		margin-left: 20%;
+	}
+
+	&__item {
+		min-width: 220px;
+		max-width: 220px;
+		box-shadow: 1px 4px 16px 2px rgba(17, 27, 36, 0.2);
+		background-color: white;
+	}
+
+	&__option {
+	}
+
+	&__name {
+	}
+}
+.option {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0px, 60px));
+		position: relative;
+		justify-content: stretch;
+
+		padding: 20px 15px 20px 15px;
+		justify-content: center;
+	}
+}
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(60px, 60px));
+	grid-template-rows: repeat(3, minmax(20px, 20px));
+	min-width: 100%;
+	min-height: 100%;
+
+	position: relative;
+
+	text-align: center;
+
+	color: white;
+	line-height: 60px;
+}
+
+.list:nth-child(1) {
+	border-radius: 5px 0 0 0;
+}
+
+.list:nth-child(3) {
+	border-radius: 0px 5px 0 0;
+}
+.list:nth-child(7) {
+	border-radius: 0px 0px 0 5px;
+}
+
+.list:nth-child(9) {
+	border-radius: 0px 0px 5px 0px;
+}
+
+.list:nth-child(odd) {
+	background-color: #404040;
+}
+
+.list:nth-child(even) {
+	background-color: #7f7f7f;
+}
+
+.product__name {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Noto Sans", sans-serif;
+	text-align: center;
+}
+
+.product__discription {
+}
+.discription__container {
+	display: flex;
+	position: relative;
+	flex: 1 1 auto;
+	justify-content: space-between;
+	margin-top: 12px;
+	align-items: center;
+	height: 40px;
+	background-color: #ebeef3;
+	padding: 0px 20px 0px 20px;
+	min-width: 200px;
+}
+.product__label {
+	display: inline-flex;
+
+	font-size: 20px;
+	position: relative;
+
+	.label {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.product__label:hover {
+	.sub__label {
+		display: flex;
+		flex: 0 0 auto;
+		position: absolute;
+		min-width: 218px;
+		min-height: 100px;
+		margin-top: -170px;
+		padding: 20px 20px 20px 20px;
+		margin-left: -19px;
+		text-align: justify;
+		background: linear-gradient(to bottom, #ffffffe0, #ffffff);
+		text-align: center;
+		word-spacing: 3px;
+	}
+	.sub__product {
+		text-align: center;
+		font-weight: 700;
+	}
+}
+
+.sub__label {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.product__button {
+	display: flex;
+	position: relative;
+	flex: 0 1 40%;
+
+	.button__items {
+		display: flex;
+
+		margin-top: -7px;
+		margin-left: 0px;
+
+		position: absolute;
+	}
+	.item__button {
+		text-decoration: none;
+		font-size: 15px;
+		color: #ee846d;
+		padding-right: 20px;
+	}
+
+	.arrow {
+		display: flex;
+		position: relative;
+		margin-left: -115px;
+		margin-top: 7px;
+
+		.arrow-1 {
+			width: 40px;
+			height: 20px;
+			margin: 0 0 0 100px;
+		}
+		.arrow-1 div {
+			position: relative;
+			width: 20px;
+			height: 2px;
+			background-color: #ee846d;
+
+			left: 0;
+			display: block;
+		}
+
+		.arrow-1 div::after {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 2px;
+			top: -3px;
+			right: -3px;
+			background-color: #ee846d;
+			transform: rotate(45deg);
+		}
+		.arrow-1 div::before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 2px;
+			top: 3px;
+			right: -3px;
+			background-color: #ee846d;
+			transform: rotate(-45deg);
+		}
+	}
+}

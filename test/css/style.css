@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #edeff2;
+}
+
+.content__products {
+  margin-top: 300px;
+}
+
+.product__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1070px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 40px;
+  -ms-grid-columns: (50px, 1fr)[3];
+      grid-template-columns: repeat(3 50px, 1fr);
+  margin-left: 20%;
+}
+
+.product__item {
+  min-width: 220px;
+  max-width: 220px;
+  -webkit-box-shadow: 1px 4px 16px 2px rgba(17, 27, 36, 0.2);
+          box-shadow: 1px 4px 16px 2px rgba(17, 27, 36, 0.2);
+  background-color: white;
+}
+
+.option__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0px, 60px))[3];
+      grid-template-columns: repeat(3, minmax(0px, 60px));
+  position: relative;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  padding: 20px 15px 20px 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(60px, 60px))[3];
+      grid-template-columns: repeat(3, minmax(60px, 60px));
+  -ms-grid-rows: (minmax(20px, 20px))[3];
+      grid-template-rows: repeat(3, minmax(20px, 20px));
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+  line-height: 60px;
+}
+
+.list:nth-child(1) {
+  -webkit-border-radius: 5px 0 0 0;
+          border-radius: 5px 0 0 0;
+}
+
+.list:nth-child(3) {
+  -webkit-border-radius: 0px 5px 0 0;
+          border-radius: 0px 5px 0 0;
+}
+
+.list:nth-child(7) {
+  -webkit-border-radius: 0px 0px 0 5px;
+          border-radius: 0px 0px 0 5px;
+}
+
+.list:nth-child(9) {
+  -webkit-border-radius: 0px 0px 5px 0px;
+          border-radius: 0px 0px 5px 0px;
+}
+
+.list:nth-child(odd) {
+  background-color: #404040;
+}
+
+.list:nth-child(even) {
+  background-color: #7f7f7f;
+}
+
+.product__name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+}
+
+.discription__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  background-color: #ebeef3;
+  padding: 0px 20px 0px 20px;
+  min-width: 200px;
+}
+
+.product__label {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 20px;
+  position: relative;
+}
+
+.product__label .label {
+  text-decoration: none;
+  color: black;
+}
+
+.product__label:hover .sub__label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: absolute;
+  min-width: 218px;
+  min-height: 100px;
+  margin-top: -170px;
+  padding: 20px 20px 20px 20px;
+  margin-left: -19px;
+  text-align: justify;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffffe0), to(#ffffff));
+  background: -webkit-linear-gradient(top, #ffffffe0, #ffffff);
+  background: -o-linear-gradient(top, #ffffffe0, #ffffff);
+  background: linear-gradient(to bottom, #ffffffe0, #ffffff);
+  text-align: center;
+  word-spacing: 3px;
+}
+
+.product__label:hover .sub__product {
+  text-align: center;
+  font-weight: 700;
+}
+
+.sub__label {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 40%;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.product__button .button__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -7px;
+  margin-left: 0px;
+  position: absolute;
+}
+
+.product__button .item__button {
+  text-decoration: none;
+  font-size: 15px;
+  color: #ee846d;
+  padding-right: 20px;
+}
+
+.product__button .arrow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-left: -115px;
+  margin-top: 7px;
+}
+
+.product__button .arrow .arrow-1 {
+  width: 40px;
+  height: 20px;
+  margin: 0 0 0 100px;
+}
+
+.product__button .arrow .arrow-1 div {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #ee846d;
+  left: 0;
+  display: block;
+}
+
+.product__button .arrow .arrow-1 div::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: -3px;
+  right: -3px;
+  background-color: #ee846d;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.product__button .arrow .arrow-1 div::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 3px;
+  right: -3px;
+  background-color: #ee846d;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
